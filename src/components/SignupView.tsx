@@ -67,8 +67,19 @@ export default function SignupView({ onGoToLogin }: SignupViewProps) {
     <div className="min-h-screen flex bg-surface">
       {/* Left side: Professional Branding */}
       <div className="hidden lg:flex w-1/2 bg-primary relative overflow-hidden flex-col justify-between p-12 text-on-primary">
-        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary-fixed/20 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-secondary/30 rounded-full blur-[100px] pointer-events-none" />
+        {/* Background Image & Overlay */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url('/images/medical_bg.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 bg-primary/85 z-0" />
+        
+        <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-primary-fixed/20 rounded-full blur-[100px] pointer-events-none z-0" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-secondary/30 rounded-full blur-[100px] pointer-events-none z-0" />
         
         <div className="z-10 flex items-center gap-3">
           <div className="p-2.5 bg-white/20 backdrop-blur-md rounded-xl text-on-primary">

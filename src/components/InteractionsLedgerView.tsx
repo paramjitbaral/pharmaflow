@@ -138,7 +138,7 @@ export default function InteractionsLedgerView({ interactions }: InteractionsLed
                       <div className="col-span-2 flex justify-end items-center gap-3 min-w-0">
                         <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded truncate max-w-[120px] inline-block ${
                           row.engagement.toLowerCase().includes('high') ? 'bg-primary/10 text-primary' :
-                          row.engagement.toLowerCase().includes('medium') ? 'bg-secondary/10 text-secondary' :
+                          row.engagement.toLowerCase().includes('medium') ? 'bg-amber-500/10 text-amber-700' :
                           'bg-error/10 text-error'
                         }`} title={row.engagement}>
                           {row.engagement}

@@ -109,8 +109,8 @@ export default function DashboardView({
     return scores;
   })();
 
-  const sentimentLabel = hcpCount === 0 ? '0%'
-    : `${positiveCount}+ ${neutralCount}~ ${cautionCount}-`;
+  const sentimentLabel = hcpCount === 0 ? '0 Total'
+    : `${hcpCount} Total`;
 
   // Dynamic Territory Data
   const regionDoctors = hcps.reduce((acc, hcp) => {

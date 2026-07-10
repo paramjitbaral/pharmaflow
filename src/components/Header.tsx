@@ -23,8 +23,6 @@ export default function Header({
   const dispatch = useDispatch<AppDispatch>();
   const user = useSelector((state: RootState) => state.auth.user);
   
-  const [showDropdown, setShowDropdown] = useState(false);
-  
   // Get full name from Supabase user metadata, or fallback to email, or default to demo name if no user
   const displayName = user?.user_metadata?.full_name || user?.email || 'Dr. Sarah Chen';
   const displayRole = user?.user_metadata?.role || 'Medical Affairs';
@@ -68,42 +66,11 @@ export default function Header({
               <p className="text-[11px] text-on-surface-variant font-medium mt-1 truncate max-w-[150px]">{displayRole}</p>
             </div>
             
-            <button 
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center hover:scale-105 transition-all ring-2 ring-primary-fixed focus:outline-none"
+            <div 
+              className="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center ring-2 ring-primary-fixed"
             >
               <User size={20} className="stroke-[2.5px]" />
-            </button>
-
-            {/* Floating Dropdown Menu */}
-            {showDropdown && (
-              <>
-                <div className="fixed inset-0 z-40" onClick={() => setShowDropdown(false)}></div>
-                <div className="absolute right-0 top-12 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-outline-variant/20 py-2 z-50 animate-in fade-in slide-in-from-top-2">
-                  <button
-                    onClick={() => {
-                      setShowDropdown(false);
-                      dispatch(setCurrentView('settings'));
-                    }}
-                    className="w-full text-left px-4 py-2.5 text-sm font-medium text-on-surface hover:bg-surface-container flex items-center gap-3 transition-colors"
-                  >
-                    <Settings size={16} className="text-on-surface-variant" />
-                    Profile Settings
-                  </button>
-                  <div className="h-px bg-outline-variant/20 my-1 w-full"></div>
-                  <button
-                    onClick={() => {
-                      setShowDropdown(false);
-                      dispatch(logout());
-                    }}
-                    className="w-full text-left px-4 py-2.5 text-sm font-medium text-error hover:bg-error-container/20 flex items-center gap-3 transition-colors"
-                  >
-                    <LogOut size={16} className="text-error" />
-                    Sign Out
-                  </button>
-                </div>
-              </>
-            )}
+            </div>
           </div>
         </div>
       </header>

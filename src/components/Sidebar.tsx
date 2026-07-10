@@ -82,7 +82,7 @@ export default function Sidebar({ currentView, onViewChange, onNewLogClick }: Si
         </button>
           <button
             onClick={() => dispatch(logout())}
-            className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-error-container/10 hover:text-error rounded-xl transition-all text-left w-full font-medium"
+            className="flex items-center gap-3 px-4 py-3 text-error hover:bg-error-container/20 rounded-xl transition-all text-left w-full font-medium"
           >
             <LogOut size={20} />
             <span className="text-sm">Sign Out</span>

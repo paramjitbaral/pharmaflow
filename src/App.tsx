@@ -159,11 +159,11 @@ export default function App() {
                   {/* Task list Column */}
                   <div className="flex flex-col gap-4">
                     <h4 className="text-xs font-bold text-primary uppercase tracking-wider">HCP Callbacks Pending</h4>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col gap-3 max-h-[350px] overflow-y-auto no-scrollbar pb-2">
                       {followups.map((task, i) => (
                         <div key={i} className="bg-white rounded-2xl p-4 border border-outline-variant/15 flex justify-between items-start shadow-sm hover:shadow-md transition-all">
-                          <div className="flex gap-3">
-                            <div className="p-2 bg-surface rounded-xl text-primary mt-0.5">
+                          <div className="flex gap-3 items-start">
+                            <div className="p-2 bg-surface rounded-xl text-primary mt-0.5 shrink-0 h-fit">
                               <CheckSquare size={16} />
                             </div>
                             <div className="flex flex-col">

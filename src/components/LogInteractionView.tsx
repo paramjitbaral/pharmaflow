@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FormInput, FileText, Bot, Plus, X, Calendar, UserCheck, MessageSquare, AlertCircle, Sparkles, Send, Mic, Check, MapPin } from 'lucide-react';
+import { FormInput, FileText, Bot, Plus, X, Calendar, UserCheck, MessageSquare, AlertCircle, Sparkles, Send, Mic, Check, MapPin, Loader2 } from 'lucide-react';
 import { HCP, Interaction } from '../types';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store/store';
@@ -598,13 +598,14 @@ export default function LogInteractionView({ hcps, onSubmitLog }: LogInteraction
                 >
                   Save Draft
                 </button>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="px-10 py-3 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/25 hover:brightness-110 active:scale-98 transition-all text-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Submitting...' : 'Submit Interaction'}
-                </button>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="px-10 py-3 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/25 hover:brightness-110 active:scale-98 transition-all text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting && <Loader2 size={16} className="animate-spin" />}
+                    {isSubmitting ? 'Submitting...' : 'Submit Interaction'}
+                  </button>
               </div>
 
             </form>

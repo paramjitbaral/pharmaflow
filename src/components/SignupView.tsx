@@ -174,10 +174,10 @@ export default function SignupView({ onGoToLogin }: SignupViewProps) {
               </button>
             </form>
           ) : (
-            <form onSubmit={handleOtpSubmit} className="flex flex-col gap-5">
-              <div className="flex flex-col gap-2">
-                <label className="text-sm font-bold text-on-surface ml-1 text-center">6-Digit Code</label>
-                <div className="flex justify-between gap-2 mt-2">
+            <form onSubmit={handleOtpSubmit} className="flex flex-col gap-6">
+              <div className="flex flex-col gap-3">
+                <label className="text-sm font-bold text-on-surface ml-1">6-Digit Code</label>
+                <div className="flex justify-start gap-3 mt-1">
                   {[0, 1, 2, 3, 4, 5].map((index) => (
                     <input
                       key={index}
@@ -187,7 +187,7 @@ export default function SignupView({ onGoToLogin }: SignupViewProps) {
                       value={otp[index] && otp[index] !== ' ' ? otp[index] : ''}
                       onChange={(e) => handleOtpChange(index, e)}
                       onKeyDown={(e) => handleOtpKeyDown(index, e)}
-                      className="w-12 h-14 bg-white rounded-xl border border-outline-variant/30 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-on-surface text-center font-mono text-xl font-bold shadow-sm"
+                      className="w-14 h-16 bg-white rounded-xl border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all text-on-surface text-center font-mono text-2xl font-bold shadow-sm"
                     />
                   ))}
                 </div>
@@ -196,7 +196,7 @@ export default function SignupView({ onGoToLogin }: SignupViewProps) {
               <button 
                 type="submit" 
                 disabled={isLoading || otp.length !== 6}
-                className="mt-6 bg-primary text-on-primary font-bold py-4 px-6 rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 text-base shadow-md"
+                className="mt-4 bg-primary text-on-primary font-bold py-4 px-6 rounded-xl hover:bg-primary/90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 text-base shadow-md w-full"
               >
                 {isLoading ? 'Verifying...' : 'Verify Email'}
                 {!isLoading && <CheckCircle2 size={20} />}
@@ -205,7 +205,7 @@ export default function SignupView({ onGoToLogin }: SignupViewProps) {
           )}
 
           <div className="mt-10">
-            <p className="text-sm text-on-surface-variant font-medium text-center">
+            <p className="text-sm text-on-surface-variant font-medium text-left ml-1">
               {showOtpScreen ? 'Need to use a different email?' : 'Already have an account?'}
               {' '}
               <button 

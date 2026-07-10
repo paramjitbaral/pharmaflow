@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  
+  --color-primary-fixed: #caeada;
+  --color-on-tertiary-container: #fafdfa;
+  --color-surface: #f7f9ff;
+  --color-on-tertiary-fixed: #181c1b;
+  --color-inverse-on-surface: #ecf1f9;
+  --color-secondary: #526255;
+  --color-on-surface: #161c22;
+  --color-tertiary-container: #717573;
+  --color-error-container: #ffdad6;
+  --color-surface-container-highest: #dde3eb;
+  --color-surface-container: #e9eef6;
+  --color-surface-bright: #f7f9ff;
+  --color-tertiary-fixed-dim: #c4c7c5;
+  --color-on-primary-fixed-variant: #314c41;
+  --color-on-error: #ffffff;
+  --color-surface-dim: #d5dae2;
+  --color-on-background: #161c22;
+  --color-on-secondary-fixed: #101f14;
+  --color-on-secondary-container: #566759;
+  --color-background: #f7f9ff;
+  --color-inverse-surface: #2b3137;
+  --color-surface-container-low: #eff4fc;
+  --color-secondary-container: #d2e4d3;
+  --color-tertiary: #585c5b;
+  --color-inverse-primary: #aecebe;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #e0e3e1;
+  --color-surface-variant: #dde3eb;
+  --color-on-tertiary-fixed-variant: #444846;
+  --color-on-primary-container: #f0fff6;
+  --color-outline: #727974;
+  --color-on-error-container: #93000a;
+  --color-outline-variant: #c1c8c3;
+  --color-secondary-fixed-dim: #b9cbbb;
+  --color-primary-fixed-dim: #aecebe;
+  --color-primary: #456155;
+  --color-on-primary-fixed: #032017;
+  --color-surface-tint: #486458;
+  --color-surface-container-high: #e3e9f0;
+  --color-on-secondary: #ffffff;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-fixed-variant: #3a4b3e;
+  --color-on-surface-variant: #424845;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary-fixed: #d5e7d6;
+  --color-error: #ba1a1a;
+  --color-primary-container: #5d7a6d;
+}
+
+/* Custom scrollbars and transition styles matching the brand design rules */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #caeada;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #aecebe;
+}
+

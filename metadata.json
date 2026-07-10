@@ -1,0 +1,6 @@
+{
+  "name": "PharmaFlow",
+  "description": "An advanced Clinical CRM for Medical Affairs, supporting HCP relationship tracking, dynamic logs, and smart conversational interaction summaries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
